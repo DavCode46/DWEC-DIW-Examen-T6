@@ -7,7 +7,15 @@
 
 :root {
     --white: #fff;
-}
+    --shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    --btn-bg: #5b43b3;
+    --btn-hover: #7761c5;
+    --light-bg: #f0f1fd;
+   
+    --light-black: rgba(0, 0, 0, 0.8);
+    --light-white: rgba(255, 255, 255, 0.8);
+    --transition: all 0.3s ease;
+  }
 
 
 * {
@@ -36,6 +44,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 8rem;
+    background: var(--light-bg);
 
     & img {
         width: 10rem;
@@ -53,6 +62,12 @@ header {
         & a {
             font-family: Playfair;
             font-size: 1.2rem;
+            color: var(--btn-bg);
+            transition: var(--transition);
+
+            &:hover {
+                color: var(--btn-hover);
+            }
         }
     } 
 }
@@ -90,16 +105,69 @@ header {
         font-size: 2.5rem;
         font-family: Playfair;
     }
+
+    & .gallery__section-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        
+        & img {
+            width: 25rem;
+            height: 17.5rem;
+            border-radius: 1rem;
+        }
+    }
 }
 
 footer {
     height: 8rem;
+    background: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & p {
         text-align: center;
         font-family: Playfair;
         font-size: 1.4rem;
     }
+}
+
+/* Clases añadidas mediante JS */
+
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--modal-bg);
+    display: grid;
+    place-content: center;
+}
+
+.modal img {
+    width: 50rem;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* Media Queries */
+
+@media (width <= 492px){
+    .gallery__section-list img {
+        width: 10rem;
+    } 
 }
 
 
