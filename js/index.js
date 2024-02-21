@@ -12,7 +12,7 @@ const startApp = () => {
   document.getElementById("current-year").textContent =
     new Date().getFullYear();
 };
-
+/* Función para fijar la barra de navegación una vez pasada la sección límite (video) */
 const stickyNav = () => {
   const header = document.querySelector("header");
   const limitSection = document.querySelector(".hero__video-section");
@@ -33,6 +33,7 @@ const stickyNav = () => {
   }
 };
 
+/* Función para mejorar la experiencia de desplazamiento  */
 const smoothNav = () => {
   const links = document.querySelectorAll(".scroll");
   links.forEach((link) => {
@@ -44,7 +45,7 @@ const smoothNav = () => {
     });
   });
 };
-
+/* Función para crear la galería de imágenes de forma dinámica */
 const createGallery = () => {
   const gallery = document.querySelector(".gallery__section-list");
 
@@ -62,7 +63,7 @@ const createGallery = () => {
     gallery.appendChild(image);
   }
 };
-
+/* Función para abrir el modal */
 const openModal = (id) => {
   const image = document.createElement("picture");
   image.innerHTML = `
