@@ -56,7 +56,6 @@
 
     & nav a {
         color: var(--btn-bg);
-        text-decoration: underline;
         margin: 1rem;
         font-size: 1.2rem;
         font-family: Playfair;
@@ -67,6 +66,7 @@
       
         &:hover {
           color: var(--btn-hover);
+          text-decoration: underline;
         }
       }
   }
@@ -154,6 +154,16 @@
 
     & p {
         font-size: 1.2rem;
+
+        & a {
+            color: #000;
+            transition: var(--transition);
+
+            &:hover {
+                transform: scale(1.1);
+                text-decoration: underline;
+            }
+        }
       }
   }
   
