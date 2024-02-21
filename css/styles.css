@@ -1,0 +1,27 @@
+@import 'normalize.css';
+
+@font-face {
+    font-family: Playfair;
+    src: url('../build/fonts/Playfair/PlayfairDisplay-SemiBoldItalic.ttf');
+}
+
+
+
+
+* {
+    text-decoration: none;
+    border: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+*::after, 
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: Montserrat;
+    scroll-behavior: smooth;
+}
